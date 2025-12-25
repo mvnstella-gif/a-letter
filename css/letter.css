@@ -155,3 +155,56 @@ body {
   opacity: 1;
   transform: translateX(0);
 }
+
+/* ===============================
+   MOBILE FIX
+================================ */
+@media (max-width: 768px) {
+
+  .letter-hero {
+    grid-template-columns: 1fr; /* jadi 1 kolom */
+    padding: 120px 24px 40px;
+    gap: 32px;
+  }
+
+  .letter-hero h1 {
+    font-size: 40px;
+  }
+
+  .letter-hero .meta {
+    font-size: 13px;
+    max-width: 100%;
+  }
+
+  .letter-intro {
+    margin-left: 0;
+    padding: 0 24px;
+    margin-top: 16px;
+    margin-bottom: 48px;
+  }
+
+  .intro-text {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .letter-content {
+    margin: 80px 0;
+    padding: 0 16px;
+  }
+
+  .letter-content .content {
+    padding: 40px 28px;
+    font-size: 14px;
+  }
+
+  #mainNav {
+    top: 16px;
+    left: 16px;
+    gap: 16px;
+  }
+
+  #mainNav a {
+    font-size: 14px;
+  }
+}
