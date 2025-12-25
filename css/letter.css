@@ -161,14 +161,16 @@ body {
 ================================ */
 @media (max-width: 768px) {
 
+  /* HERO JADI 1 KOLOM */
   .letter-hero {
-    grid-template-columns: 1fr; /* jadi 1 kolom */
-    padding: 120px 24px 40px;
+    grid-template-columns: 1fr;
     gap: 32px;
+    padding: 120px 6vw 40px;
+    min-height: auto;
   }
 
   .letter-hero h1 {
-    font-size: 40px;
+    font-size: 42px;
   }
 
   .letter-hero .meta {
@@ -176,35 +178,54 @@ body {
     max-width: 100%;
   }
 
-  .letter-intro {
-    margin-left: 0;
-    padding: 0 24px;
-    margin-top: 16px;
-    margin-bottom: 48px;
+  /* IMAGE GA NGEGANGGU */
+  .letter-image {
+    order: -1;
   }
 
-  .intro-text {
+  /* INTRO DEKET KE HERO */
+  .letter-intro {
+    margin-top: 0;
+    margin-bottom: 60px;
+  }
+
+  /* LETTER CONTENT */
+  .letter-content {
+    margin: 80px 0;
+  }
+
+  .letter-content .content {
+    padding: 40px 24px;
     font-size: 14px;
-    line-height: 1.8;
+  }
+
+  /* 🚨 PENTING: MATIIN REVEAL DI MOBILE */
+  .reveal,
+  .reveal-left {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+@media (max-width: 768px) {
+  .reveal,
+  .reveal-left {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .letter-hero {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 120px 6vw 40px;
   }
 
   .letter-content {
     margin: 80px 0;
-    padding: 0 16px;
   }
 
   .letter-content .content {
     padding: 40px 28px;
     font-size: 14px;
   }
-
-  #mainNav {
-    top: 16px;
-    left: 16px;
-    gap: 16px;
-  }
-
-  #mainNav a {
-    font-size: 14px;
-  }
 }
+
