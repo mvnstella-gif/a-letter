@@ -1,0 +1,286 @@
+/* ===============================
+   GLOBAL
+================================ */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: radial-gradient(circle at top, #1a0000, #000 60%);
+  color: #f2f2f2;
+  margin: 0;
+  overflow-y: auto;     /* WAJIB */
+}
+
+/* SECTION */
+.section {
+  min-height: 100vh;
+  padding: 140px 6vw;
+  position: relative;
+}
+
+
+/* ===============================
+   NAV
+================================ */
+.main-nav {
+  position: fixed;
+  top: 24px;
+  left: 32px;
+  z-index: 1000;
+  display: flex;
+  gap: 24px;
+}
+
+.main-nav a {
+  font-size: 22px;
+  letter-spacing: .8px;
+  opacity: .7;
+}
+
+.main-nav a:hover {
+  opacity: 1;
+}
+
+/* ===============================
+   SECTION BASE
+================================ */
+.section {
+  min-height: 100vh;
+  padding: 160px 6vw 120px;
+  position: relative;
+}
+
+/* ===============================
+   SECTION TITLE
+================================ */
+.section-title {
+  font-size: 52px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 80px;
+}
+
+.section-title.center {
+  text-align: center;
+}
+
+.section-title.left {
+  text-align: left;
+}
+
+/* ===============================
+   HIGHLIGHTS
+================================ */
+.section-highlights {
+  padding-top: 200px;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 28px;
+  height: calc(100vh - 320px);
+}
+
+.highlight-card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 14x;
+  text-decoration: none;
+  color: inherit;
+}
+
+.highlight-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(.75);
+  transition: transform .6s ease, filter .6s ease;
+}
+
+.highlight-card:hover img {
+  transform: scale(1.05);
+  filter: brightness(.9);
+}
+
+.highlight-text {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  z-index: 2;
+}
+
+.highlight-text h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.highlight-text p {
+  font-size: 13px;
+  opacity: .75;
+  line-height: 1.4;
+}
+
+/* OVERLAY */
+.highlight-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.25);
+  z-index: 1; /* DI BAWAH TEXT */
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+
+/* HOVER EFFECT */
+.highlight-card:hover img {
+  transform: scale(1.08);
+}
+
+.highlight-card:hover::after {
+  opacity: 1;
+}
+
+/* ===============================
+   TIME SECTION
+================================ */
+.section-time {
+  text-align: center;
+}
+
+.time-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 220px;
+  margin-top: 100px;
+}
+
+.clock .date {
+  font-size:22px;
+  opacity: .6;
+  margin-bottom: 12px;
+}
+
+.clock .time {
+  font-size: 62px;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.clock .meta {
+  font-size: 22px;
+  opacity: .6;
+  margin-top: 14px;
+}
+
+.time-note {
+  margin-top: 120px;
+  font-size: 18px;
+  opacity: .4;
+  letter-spacing: .8px;
+}
+
+/* ===============================
+   CINEMA / SONG SECTION
+================================ */
+
+.section-cinema {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.cinema-inner {
+  max-width: 1100px;
+  margin-left: 6vw; /* Biar rata kiri tapi ga mepet */
+}
+
+/* JUDUL */
+.section-cinema .section-title {
+  position: static;
+  transform: none;
+  text-align: left;
+  margin-bottom: 80px;
+  max-width: 600px;
+}
+
+/* TABLE OVERRIDE BOOTSTRAP */
+.cinema-table {
+  background: transparent !important;
+  border-color: rgba(255,255,255,.1);
+}
+
+.cinema-table th,
+.cinema-table td {
+  background: transparent !important;
+  color: #ddd;
+  font-size: 17px;
+  padding: 18px 16px;
+  border-color: rgba(255,255,255,.08);
+}
+
+.cinema-table thead th {
+  font-size: 16px;
+  letter-spacing: 1px;
+  opacity: .6;
+}
+
+ /* Spotify link – subtle & aesthetic */
+.spotify-link {
+  color: #9aa0a6;              /* abu halus */
+  text-decoration: none;       /* ilangin underline */
+  font-size: 16px;
+  letter-spacing: .4px;
+  opacity: .6;
+  transition: opacity .3s ease, color .3s ease;
+}
+
+.spotify-link:hover {
+  opacity: 1;
+  color: #1DB954;              /* hijau spotify, tapi cuma pas hover */
+  text-decoration: none;
+}
+
+/* ===============================
+   SCROLL FADE ANIMATION
+================================ */
+.fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity .8s ease, transform .8s ease;
+  will-change: opacity, transform;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(24px);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* ===============================
+   FIX LINK COLOR (HIGHLIGHTS)
+================================ */
+
+.highlight-card {
+  color: #f2f2f2;          /* putih kayak awal */
+  text-decoration: none;  /* ilangin underline */
+}
+
+.highlight-card:visited {
+  color: #f2f2f2;
+}
+
+.highlight-card h3,
+.highlight-card p {
+  color: #f2f2f2;
+}
+

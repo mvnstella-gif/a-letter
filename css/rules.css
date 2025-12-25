@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #1a0000, #000 70%);
+  color: #f2f2f2;
+  overflow-x: hidden;
+}
+
+/* LAYOUT */
+.rules-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rules-hero h1 {
+  font-size: 72px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* CONTENT */
+.rules-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 120px 32px 80px;
+}
+
+.rules-content h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+
+.rules-content p {
+  font-size: 15px;
+  line-height: 1.9;
+  opacity: 0.85;
+  margin-bottom: 20px;
+}
+
+/* BACK BUTTON */
+.btn-back {
+  display: inline-block;
+  margin-top: 40px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.7;
+  transition: opacity .3s ease;
+}
+
+.btn-back:hover {
+  opacity: 1;
+}
+
+/* =====================
+   REVEAL ANIMATION
+===================== */
+.reveal-left,
+.reveal-right {
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.reveal-left {
+  transform: translateX(-60px);
+}
+
+.reveal-right {
+  transform: translateX(60px);
+}
+
+.reveal-left.show,
+.reveal-right.show {
+  opacity: 1;
+  transform: translateX(0);
+}

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Archive</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+      body {
+  font-family: 'Montserrat', sans-serif;
+  background: radial-gradient(circle at top, #1a0000, #000 60%);
+  color: #f2f2f2;
+  margin: 0;
+}
+body {
+  animation: fadeIn .8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+        .navbar {
+            min-height: 64px;
+        }
+
+        /* NAV — SAME AS INDEX */
+        #mainNav {
+        position: fixed;
+        top: 24px;
+        left: 32px;
+        z-index: 1000;
+        display: flex;
+        gap: 24px;
+        }
+
+      #mainNav a {
+  font-size: 14px;
+  letter-spacing: .8px;
+  color: #f2f2f2;
+  opacity: .7;
+  text-decoration: none;
+}
+
+        #mainNav a:hover {
+        opacity: 1;
+        }
+
+
+        .menu-pill {
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 13px;
+            letter-spacing: .6px;
+            color: #000;
+        }
+
+        .home {
+          background: transparent;
+        }
+
+        .archive {
+         background: transparent;
+        }
+
+        .about {
+         background: transparent;
+        }
+
+        .menu-pill:hover {
+            opacity: .85;
+        }
+        /* SCROLL REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity .9s ease, transform .9s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  transform: translateX(-60px);
+}
+
+.reveal-left.show {
+  transform: translateX(0);
+}
+
+
+        /* HERO */
+        .hero {
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+
+        .hero h1 {
+            font-weight: 800;
+            font-size: 48px;
+        }
+
+        /* ARCHIVE GRID */
+        .archive-card {
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  transition: transform .6s ease;
+}
+
+.archive-card:hover {
+  transform: scale(1.06);
+}
+
+
+        .archive-link {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+      .archive-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.archive-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.15);
+  opacity: 0;
+  transition: .4s ease;
+}
+
+.archive-card:hover::after {
+  opacity: 1;
+}
+
+
+
+        .archive-info {
+            position: absolute;
+            bottom: 8px;
+            left: 8px;
+            font-size: 11px;
+            line-height: 1.2;
+        }
+
+        .archive-info span {
+            opacity: .7
+        }
+
+        .archive-link {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .archive-link:hover {
+            color: inherit;
+        }
+    </style>
+</head>
+
+<body>
+
+   <!-- NAV -->
+  <nav id="mainNav" class="main-nav">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="archive.html" class="nav-link">Archive</a>
+  <a href="about.html" class="nav-link">About</a>
+</nav>
+
+
+    <!-- HERO -->
+    <section class="hero reveal">
+        <h1>Archive</h1>
+    </section>
+
+<!-- GRID -->
+<section class="container my-5">
+  <div class="row g-4">
+
+    <div class="col-6 reveal">
+      <a href="Letters/coordinates.html" class="archive-link">
+        <div class="archive-card" style="background-image:url('1.jpg')">
+          <div class="archive-info">
+            Coordinates<br>
+            <span>6.2088° S — 44.4268° N · 2025</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-6 reveal">
+      <a href="Letters/lost.html" class="archive-link">
+        <div class="archive-card" style="background-image:url('2.jpg')">
+          <div class="archive-info">
+            Open This When You Feel Lost<br>
+            <span>Reminder</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-6 reveal">
+      <a href="Letters/doubt.html" class="archive-link">
+        <div class="archive-card" style="background-image:url('3.jpg')">
+          <div class="archive-info">
+            Open This When You Doubt Your Own Judgement<br>
+            <span>Perspective</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-6 reveal">
+      <a href="Letters/behind.html" class="archive-link">
+        <div class="archive-card" style="background-image:url('4.jpg')">
+          <div class="archive-info">
+            Open This ONLY If We Made It This Far<br>
+            <span>Time & Growth</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-6 reveal">
+      <a href="Letters/circular.html" class="archive-link">
+        <div class="archive-card" style="background-image:url('5.jpg')">
+          <div class="archive-info">
+            Open This When Your Thinking Becomes Circular<br>
+            <span>Grounding</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-6 reveal">
+      <a href="Letters/distorted.html" class="archive-link">
+        <div class="archive-card" style="background-image:url('6.jpg')">
+          <div class="archive-info">
+            Open This When Perspectives Feel Distorted<br>
+            <span>Clarity</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-6 reveal">
+      <a href="Letters/heavy.html" class="archive-link">
+        <div class="archive-card" style="background-image:url('7.jpg')">
+          <div class="archive-info">
+            Open This When Your Body Feels Heavier Than Your Mind<br>
+            <span>Rest</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-6 reveal">
+      <a href="Letters/strong.html" class="archive-link">
+        <div class="archive-card" style="background-image:url('8.jpg')">
+          <div class="archive-info">
+            Open This When You’re Trying To Stay Strong<br>
+            <span>Soft Strength</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-6 reveal">
+      <a href="Letters/birthday.html" class="archive-link">
+        <div class="archive-card" style="background-image:url('9.jpg')">
+          <div class="archive-info">
+            Open This On Your Birthday<br>
+            <span>Wishes</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-6 reveal">
+      <a href="Letters/meet.html" class="archive-link">
+        <div class="archive-card" style="background-image:url('10.jpg')">
+          <div class="archive-info">
+            Open This One Day Before We Meet<br>
+            <span>Anticipation</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-6 reveal">
+      <a href="Letters/silence.html" class="archive-link">
+        <div class="archive-card" style="background-image:url('11.jpg')">
+          <div class="archive-info">
+            Open This When Disagreement Becomes Noise<br>
+            <span>Unspoken</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-6 reveal">
+      <a href="Letters/disagreement.html" class="archive-link">
+        <div class="archive-card" style="background-image:url('12.jpg')">
+          <div class="archive-info">
+            Open This If Our Paths Change<br>
+            <span>Listening</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+  </div>
+</section>
+    <script>
+const reveals = document.querySelectorAll('.reveal');
+
+function revealOnScroll() {
+  const windowHeight = window.innerHeight;
+
+  reveals.forEach(el => {
+    const elementTop = el.getBoundingClientRect().top;
+    const elementBottom = el.getBoundingClientRect().bottom;
+
+    // masuk viewport
+    if (elementTop < windowHeight - 80 && elementBottom > 80) {
+      el.classList.add('show');
+    } else {
+      el.classList.remove('show');
+    }
+  });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
+</script>
+
+
+
+</body>
+
+</html>
